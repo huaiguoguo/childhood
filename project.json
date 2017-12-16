@@ -1,6 +1,5 @@
 {
     "project_type": "javascript",
-
     "debugMode" : 1,
     "showFPS" : false,
     "frameRate" : 60,
@@ -8,11 +7,15 @@
     "id" : "childhood",
     "renderMode" : 1,
     "engineDir":"frameworks/cocos2d-html5",
-
     "modules" : ["cocos2d"],
-
     "jsList" : [
         "src/resource.js",
-        "src/StartScene.js"
+        "src/BootScene.js",
+        "src/StartScene.js",
+        "src/OneScene.js",
+        "src/TwoScene.js",
+        "src/ThreeScene.js",
+        "src/SchoolScene.js",
+        "src/CartoonScene.js"
     ]
 }

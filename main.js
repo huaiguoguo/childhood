@@ -1,5 +1,4 @@
 
-
 cc.game.onStart = function () {
 
     var sys = cc.sys;
@@ -13,7 +12,7 @@ cc.game.onStart = function () {
     }
 
     cc.loader.resPath = "res";
-    cc.director.setClearColor(cc.color(55,100,155,255));
+    // cc.director.setClearColor(cc.color(55,100,155,255));
 
     var designSize = cc.size(480, 700);
     var screenSize = cc.view.getFrameSize();
@@ -23,8 +22,8 @@ cc.game.onStart = function () {
     // cc.view.setDesignResolutionSize(800, 800, cc.ResolutionPolicy.SHOW_ALL); //设置画面尺寸和适配规则
     cc.view.resizeWithBrowserSize(true); //设置是否跟随浏览器窗口变化
 
-    cc.LoaderScene.preload(g_resources, function () {
-        cc.director.runScene(new StartScene());
+    cc.LoaderScene.preload(res.Start_BackGround_png, function () {
+        cc.director.runScene(new CartoonScene());
     },this);
 
 };
