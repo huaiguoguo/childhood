@@ -23,7 +23,7 @@ cc.game.onStart = function () {
     cc.view.resizeWithBrowserSize(true); //设置是否跟随浏览器窗口变化
 
     cc.LoaderScene.preload(res.Start_BackGround_png, function () {
-        cc.director.runScene(new LibraryScene());
+        cc.director.runScene(new ShareScene());
     },this);
 
 };

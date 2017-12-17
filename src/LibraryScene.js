@@ -31,8 +31,7 @@ var LibraryLayer = cc.Layer.extend({
             var actionTo = new cc.MoveTo(1, cc.p(380, 600));
             answer.runAction(actionTo);
         }, 1);
-
-
+        
         this.scheduleOnce(function (f) {
             //梅梅的自我介绍
             var question = new cc.Sprite(res.LibraryScene.library_question_png);
@@ -44,7 +43,7 @@ var LibraryLayer = cc.Layer.extend({
         }, 4);
 
         var me = this;
-        this.scheduleOnce(function () {
+        this.scheduleOnce(function (f) {
             //创建新场景
             var personScene = new cc.Scene();
             var newBackground=new cc.Sprite(res.LibraryScene.person_tirrable_jpg);
@@ -53,8 +52,6 @@ var LibraryLayer = cc.Layer.extend({
             //替换场景
             cc.director.runScene(personScene);
         }, 7);
-
-
 
         return true;
     }

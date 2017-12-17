@@ -17,6 +17,7 @@
         "src/ThreeScene.js",
         "src/SchoolScene.js",
         "src/CartoonScene.js",
-        "src/LibraryScene.js"
+        "src/LibraryScene.js",
+        "src/ShareScene.js"
     ]
 }

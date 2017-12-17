@@ -49,7 +49,17 @@ var res = {
         library_answer_png:"LibraryScene/library_answer.png",
         library_question_png:"LibraryScene/library_question.png",
         person_jpg:"LibraryScene/person.jpg",
-        person_tirrable_jpg:"LibraryScene/person_tirrable.jpg"
+        person_tirrable_jpg:"LibraryScene/person_tirrable.jpg",
+        sun_jpg:"LibraryScene/sun.jpg",
+        person_left_png:"LibraryScene/person_left.png",
+        person_right_png:"LibraryScene/person_right.png",
+        youchildheart_png:"LibraryScene/youchildheart.png",
+        notice_png:"LibraryScene/notice.png",
+        share_png:"LibraryScene/share.png",
+        asus_png:"LibraryScene/asus.png",
+        again_png:"LibraryScene/again.png",
+        rate_png:"LibraryScene/rate.png",
+        share_guid_png:"LibraryScene/share_guid.png",
     }
 };
 
