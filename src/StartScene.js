@@ -61,9 +61,11 @@ var StartLayer = cc.Layer.extend({
         var textAnimate = new cc.Animate(textAnimation);
         this.textSprite.runAction(new cc.RepeatForever(textAnimate));
 
-
         //跳转到引导(点击)场景页面
-
+        this.scheduleOnce(function (f) {
+            var transition=new cc.TransitionCrossFade(1,new BootScene() );
+                cc.director.runScene(transition);
+        }, 3);
 
         return true;
 
@@ -78,3 +80,5 @@ var StartScene = cc.Scene.extend({
         this.addChild(layer);
     }
 });
+
+

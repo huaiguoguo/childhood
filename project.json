@@ -7,7 +7,7 @@
     "id" : "childhood",
     "renderMode" : 1,
     "engineDir":"frameworks/cocos2d-html5",
-    "modules" : ["cocos2d"],
+    "modules" : ["cocos2d", "extensions"],
     "jsList" : [
         "src/resource.js",
         "src/BootScene.js",
@@ -16,6 +16,7 @@
         "src/TwoScene.js",
         "src/ThreeScene.js",
         "src/SchoolScene.js",
-        "src/CartoonScene.js"
+        "src/CartoonScene.js",
+        "src/LibraryScene.js"
     ]
 }

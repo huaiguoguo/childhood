@@ -5,6 +5,9 @@
 var LibraryLayer = cc.Layer.extend({
     ctor:function () {
         this._super();
+
+
+
         return true;
     }
 });
@@ -13,8 +16,8 @@ var LibraryScene = cc.Scene.extend({
     onEnter:function () {
         this._super();
 
-        var LibrayLayer = new LibrayLayer();
-        this.addChild(LibrayLayer);
-
+        var Libraylayer = new LibraryLayer();
+        this.addChild(Libraylayer);
+        
     }
 });

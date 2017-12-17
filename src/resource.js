@@ -40,6 +40,9 @@ var res = {
         answer_a:"CartoonScene/answer_a.png",
         answer_b:"CartoonScene/answer_b.png",
         answer_c:"CartoonScene/answer_c.png"
+    },
+    TimeMachine:{
+        time_auto:"machine/time_auto.mp3"
     }
 };
 
