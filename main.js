@@ -10,8 +10,8 @@ cc.game.onStart = function () {
         sys.browserType !== sys.BROWSER_TYPE_WECHAT) {
         cc.view.enableAutoFullScreen(true);
     }
-
     cc.loader.resPath = "res";
+    cc.audioEngine.playMusic(res.background_music);
     // cc.director.setClearColor(cc.color(55,100,155,255));
 
     var designSize = cc.size(480, 700);
@@ -23,7 +23,7 @@ cc.game.onStart = function () {
     cc.view.resizeWithBrowserSize(true); //设置是否跟随浏览器窗口变化
 
     cc.LoaderScene.preload(res.Start_BackGround_png, function () {
-        cc.director.runScene(new CartoonScene());
+        cc.director.runScene(new LibraryScene());
     },this);
 
 };

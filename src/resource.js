@@ -43,6 +43,13 @@ var res = {
     },
     TimeMachine:{
         time_auto:"machine/time_auto.mp3"
+    },
+    background_music:"background_music.mp3",
+    LibraryScene:{
+        library_answer_png:"LibraryScene/library_answer.png",
+        library_question_png:"LibraryScene/library_question.png",
+        person_jpg:"LibraryScene/person.jpg",
+        person_tirrable_jpg:"LibraryScene/person_tirrable.jpg"
     }
 };
 

@@ -19,7 +19,7 @@ var SchoolLayer = cc.Layer.extend({
         var animate = new cc.Animate(time_machine);
         time.runAction(new cc.repeatForever(animate));
 
-        cc.audioEngine.playMusic(res.TimeMachine.time_auto);
+        cc.audioEngine.playEffect(res.TimeMachine.time_auto);
         this.scheduleOnce(function () {
             var transition=new cc.TransitionCrossFade(2,new CartoonScene() );
             cc.director.runScene(transition);
