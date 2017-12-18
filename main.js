@@ -31,7 +31,7 @@ cc.game.onStart = function () {
     cc.audioEngine.playMusic(res.background_music);
     // cc.director.setClearColor(cc.color(55,100,155,255));
 
-    cc.LoaderScene.preload(res.Start_BackGround_png, function () {
+    cc.LoaderScene.preload(g_resources, function () {
         cc.director.runScene(new StartScene());
     },this);
 

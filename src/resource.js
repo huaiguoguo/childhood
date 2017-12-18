@@ -73,13 +73,24 @@ var res = {
         bird_png:"HouseScene/bird.png",
         know_png:"HouseScene/know.png",
         full_house_jpg:"HouseScene/full_house.jpg"
-    }
+    },
+    plist:"StartScene/time.plist"
 };
+
 
 var score = 0;
 
 var g_resources = [];
 
-// for (var i in res){
-//     g_resources.push(res[i]);
-// }
+for (var i in res){
+    if((typeof res[i]) == "object"){
+        var child_res = res[i];
+        for (var x in child_res){
+            g_resources.push(child_res[x]);
+        }
+    }else{
+        g_resources.push(res[i]);
+    }
+}
+
+console.log(g_resources);

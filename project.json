@@ -20,6 +20,7 @@
         "src/LibraryScene.js",
         "src/MemoryScene.js",
         "src/ShareScene.js",
-        "src/HouseScene.js"
+        "src/HouseScene.js",
+        "src/VideoScene.js"
     ]
 }
