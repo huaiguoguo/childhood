@@ -85,9 +85,9 @@ var g_resources = [];
 for (var i in res){
     if((typeof res[i]) == "object"){
         var child_res = res[i];
-        // for (var x in child_res){
-        //     g_resources.push(child_res[x]);
-        // }
+        for (var x in child_res){
+            g_resources.push(child_res[x]);
+        }
     }else{
         g_resources.push(res[i]);
     }
