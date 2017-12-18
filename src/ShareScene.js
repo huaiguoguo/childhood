@@ -23,15 +23,23 @@ var ShareLayer = cc.Layer.extend({
         youchildheart.setScale(0.6);
         this.addChild(youchildheart,2);
 
+         var notice_img = null;
+        if (score<60){
+            notice_img = res.LibraryScene.low_png;
+        }else if (score>=60 && score<80){
+            notice_img = res.LibraryScene.notice_png;
+        }else if (score>=80){
+            notice_img = res.LibraryScene.text_png;
+        }
 
-        var notice = new cc.Sprite(res.LibraryScene.notice_png);
+        var notice = new cc.Sprite(notice_img);
         notice.setPosition(cc.p(size.width/2, size.height/4));
         notice.setScale(0.7);
         this.addChild(notice,2);
 
 
         //百分比 数字
-        var rate_num = new cc.LabelTTF("40", "", 150);
+        var rate_num = new cc.LabelTTF(score.toString(), "", 150);
         rate_num.setFontFillColor(cc.color(0,0,0));
         rate_num.setPosition(cc.p(size.width/2-50, size.height/2));
         rate_num.setScale(0.6);
@@ -44,20 +52,26 @@ var ShareLayer = cc.Layer.extend({
         rate.setScale(0.6);
         this.addChild(rate,2);
 
-
-
         var again = new ccui.Button(res.LibraryScene.again_png);
         again.setPosition(cc.p(size.width/2, size.height/2-100));
         again.setScale(0.6);
         this.addChild(again,2);
+
         var me = this;
         again.addClickEventListener(function () {
+            cc.director.runScene(new OneScene());
+        });
 
-            var share_guid_bg = new cc.Node();
+        var share = new ccui.Button(res.LibraryScene.share_png);
+        share.setPosition(cc.p(size.width/2, size.height/7.5));
+        share.setScale(0.6);
+        this.addChild(share,2);
+        share.addClickEventListener(function () {
+
+            var share_guid_bg = new cc.Sprite("huise.png");
             share_guid_bg.setPosition(cc.p(size.width/2, size.height/2));
-            share_guid_bg.setColor(cc.color(255, 255, 233));
-            share_guid_bg.setOpacity(1.8);
-            me.addChild(share_guid_bg,3);
+            // share_guid_bg.setColor(cc.color(0, 0, 0));
+            me.addChild(share_guid_bg,2);
 
             var share_guid = new cc.Sprite(res.LibraryScene.share_guid_png);
             share_guid.setPosition(cc.p(size.width/2, size.height/2));
@@ -65,18 +79,10 @@ var ShareLayer = cc.Layer.extend({
             me.addChild(share_guid,3);
         });
 
-
-        var share = new cc.Sprite(res.LibraryScene.share_png);
-        share.setPosition(cc.p(size.width/2, size.height/7.5));
-        share.setScale(0.6);
-        this.addChild(share,2);
-
-        var asus = new cc.Sprite(res.LibraryScene.asus_png);
-        asus.setPosition(cc.p(size.width/2, size.height/2-320));
+        var asus = new cc.Sprite(res.HouseScene.asus_png);
+        asus.setPosition(cc.p(size.width/2, size.height/2-350));
         asus.setScale(0.6);
         this.addChild(asus,2);
-
-
 
         return true;
     }

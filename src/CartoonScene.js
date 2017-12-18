@@ -66,6 +66,7 @@ var CartoonLayer = cc.Layer.extend({
         this.addChild(this.answer_a, 3);
         this.answer_a.addClickEventListener(function () {
             me.time();
+            score+=20;
         });
 
 

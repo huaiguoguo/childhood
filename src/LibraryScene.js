@@ -1,8 +1,7 @@
-/*
- * 图书馆 交谈场景 —-> 惊呀状 -> 跳转到自己房间->跳转到最后一个场景(童心完整度)
- */
-
 var LibraryLayer = cc.Layer.extend({
+    goto:function () {
+        cc.director.runScene(  new MemoryScene() ) ;
+    },
     ctor:function () {
         this._super();
 
@@ -22,36 +21,32 @@ var LibraryLayer = cc.Layer.extend({
         var chatAnimate = new cc.Animate(chatAnimation);
         chat.runAction(new cc.repeatForever(chatAnimate));
 
+        var me = this;
         this.scheduleOnce(function (f) {
             //梅梅的自我介绍
             var answer = new cc.Sprite(res.LibraryScene.library_answer_png);
             answer.setPosition(cc.p(size.width, size.height));
             answer.setScale(0.6);
-            this.addChild(answer, 2);
+            me.addChild(answer, 2);
             var actionTo = new cc.MoveTo(1, cc.p(380, 600));
             answer.runAction(actionTo);
         }, 1);
-        
+
+
         this.scheduleOnce(function (f) {
-            //梅梅的自我介绍
+            //李雷 好像在哪儿见过
             var question = new cc.Sprite(res.LibraryScene.library_question_png);
             question.setPosition(cc.p(0, size.height/2+200));
             question.setScale(0.6);
-            this.addChild(question, 2);
+            me.addChild(question, 2);
             var action = new cc.MoveTo(1, cc.p(size.width/2-100, size.height/2+200));
             question.runAction(action);
-        }, 4);
+        }, 2);
 
-        var me = this;
-        this.scheduleOnce(function (f) {
-            //创建新场景
-            var personScene = new cc.Scene();
-            var newBackground=new cc.Sprite(res.LibraryScene.person_tirrable_jpg);
-            newBackground.setPosition(size.width/2,size.height/2);
-            personScene.addChild(newBackground);
-            //替换场景
-            cc.director.runScene(personScene);
-        }, 7);
+
+        this.scheduleOnce(function () {
+            me.goto();
+        }, 5);
 
         return true;
     }

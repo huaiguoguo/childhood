@@ -93,6 +93,7 @@ var ThreeLayer = cc.Layer.extend({
         this.addChild(this.answer_c, 3);
         this.answer_c.addClickEventListener(function () {
             me.time();
+            score+=20;
         });
 
         return true;

@@ -79,6 +79,7 @@ var OneSceneLayer = cc.Layer.extend({
         this.addChild(this.answer_a, 3);
         this.answer_a.addClickEventListener(function () {
             me.time();
+            score+=20;
         });
 
         this.answer_b = new ccui.Button(res.OneScene.answer_b);

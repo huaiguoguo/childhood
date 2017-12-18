@@ -63,7 +63,28 @@ var BootLayer = cc.Layer.extend({
 
         var me = this;
         startBtn.addClickEventListener(function () {
-            me.time();
+
+            var time = new cc.Sprite();
+            time.setPosition(cc.p(size.width / 2, size.height / 2));
+            me.addChild(time, 3);
+
+            var time_machine = new cc.Animation();
+            for (var i = 1; i <= 10; i++) {
+                time_machine.addSpriteFrameWithFile("machine/time_machine_" + i + ".jpg");
+            }
+
+            time_machine.setDelayPerUnit(4 / 10);
+            time_machine.setRestoreOriginalFrame(true);
+            var animate = new cc.Animate(time_machine);
+            time.runAction(new cc.repeatForever(animate));
+
+            cc.audioEngine.playEffect(res.TimeMachine.time_auto);
+            me.scheduleOnce(function (f) {
+                var transition = new cc.TransitionCrossFade(2, new OneScene());
+                cc.director.runScene(transition);
+            }, 1);
+
+
         });
 
 

@@ -54,14 +54,29 @@ var res = {
         person_left_png:"LibraryScene/person_left.png",
         person_right_png:"LibraryScene/person_right.png",
         youchildheart_png:"LibraryScene/youchildheart.png",
+        low_png:"LibraryScene/low.png",
         notice_png:"LibraryScene/notice.png",
+        text_png:"LibraryScene/text.png",
         share_png:"LibraryScene/share.png",
         asus_png:"LibraryScene/asus.png",
         again_png:"LibraryScene/again.png",
         rate_png:"LibraryScene/rate.png",
-        share_guid_png:"LibraryScene/share_guid.png",
+        share_guid_png:"LibraryScene/share_guid.png"
+    },
+    HouseScene:{
+        asus_png:"HouseScene/asus.png",
+        window_jpg:"HouseScene/window.jpg",
+        table_lnmp_png:"HouseScene/table_lnmp.png",
+        person_sit_png:"HouseScene/person_sit.png",
+        desktop_png:"HouseScene/desktop.png",
+        computer_png:"HouseScene/computer.png",
+        bird_png:"HouseScene/bird.png",
+        know_png:"HouseScene/know.png",
+        full_house_jpg:"HouseScene/full_house.jpg"
     }
 };
+
+var score = 0;
 
 var g_resources = [];
 

@@ -18,6 +18,8 @@
         "src/SchoolScene.js",
         "src/CartoonScene.js",
         "src/LibraryScene.js",
-        "src/ShareScene.js"
+        "src/MemoryScene.js",
+        "src/ShareScene.js",
+        "src/HouseScene.js"
     ]
 }
